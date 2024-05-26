@@ -1,5 +1,5 @@
 <?php
-  functionc($tenloai){
+  function insert_danhmuc($tenloai){
     $sql = "INSERT INTO danhmuc (name) VALUES ('$tenloai')";
     pdo_execute($sql);
   }

@@ -14,7 +14,7 @@
       <div class="row mb menu">
         <ul>
           <li><a href="index.php">Trang chủ</a></li>
-          <li><a href="index.php?act=quanlydm">Danh mục</a></li>
+          <li><a href="index.php?act=adddm">Danh mục</a></li>
           <li><a href="index.php?act=addsp">Hàng hóa</a></li>
           <li><a href="index.php?act=dskh">Khách hàng</a></li>
           <li><a href="index.php?act=dsbl">Bình luận</a></li>

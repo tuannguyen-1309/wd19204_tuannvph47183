@@ -18,6 +18,9 @@
 .mb10 {
   margin-bottom: 10px;
 }
+.mt{
+  margin-top: 20px;
+}
 .mr {
   margin-right: 2%;
 }
@@ -107,7 +110,7 @@
 }
 .box-sp {
   float: left;
-  width: 32%;
+  width: 31%;
   min-height: 300px;
   border: 1px solid #eee;
   border-radius: 5px;

@@ -1,19 +1,21 @@
 <?php
-  include './view/header.php';
-
+  include "./view/header.php";
   if(isset($_GET['act'])&&($_GET['act']!="")){
     $act = $_GET['act'];
-    switch ($variable) {
-      case 'value':
-        # code...
+    switch ($act) {
+      case 'gioithieu':
+        include "./view/gioithieu.php";
+        break;
+      case 'lienhe':
+        include "./view/lienhe.php";
         break;
       
       default:
-        # code...
+        include './view/home.php';
         break;
     }
+  }else{
+    include './view/home.php';
   }
-
-  include './view/home.php';
   include './view/footer.php';
 ?>

@@ -7,15 +7,7 @@
   if(isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act) {
-      case 'quanlydm':
-        //Kiểm tra người dùng có click vào nút Add hay không
-        if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
-          $tenloai=$_POST['tenloai'];
-          insert_danhmuc($tenloai);
-          $thongbao="Thêm thành công";
-        }
-        include './danhmuc/quanlydm.php';
-        break;
+      
       case 'adddm':
         //Kiểm tra người dùng có click vào nút Add hay không
         if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
