@@ -1,21 +1,67 @@
 <div class="row mb">
         <div class="box-left mr">
           <div class="row">
-            <div class="banner">
-              <div class="list-images">
-                <img
-                  id="image"
-                  onclick="changeImage()"
-                  src="view./images/banner.webp"
-                  alt="banner"
-                />
-                <img src="view./images/banner2.webp" alt="banner" />
-                <img src="view./images/banner3.webp" alt="banner" />
+            <div class="slideshow-container">
+
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <img src="view./images/banner.webp" style="width:100%">
               </div>
-            </div>
+              <div class="mySlides fade">
+                <img src="view./images/banner2.webp" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <img src="view./images/banner3.webp" style="width:100%">
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+
+              <!-- The dots/circles -->
+              <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+            
           </div>
           <div class="row mt">
+            <?php
+            $i=0;
+              foreach ($spnew as $sp) {
+                extract($sp);
+                $linksp="index.php?act=sanphamct&idsp=".$id;
+                $formatted_price = number_format($price, 0, ',', '.');
+                // $img lấy tên từ cột database
+                $hinh = $img_path.$img;
+                if(($i==2)||($i==5 )||($i==8)){
+                  $mr="";
+                }else{
+                  $mr="mr";
+                }
+                echo '<div class="box-sp '.$mr.'">
+                      <div class="img row"><a href="'.$linksp.'"><img src="'.$hinh.'" alt="" /></a></div>
+                      <p>'.$formatted_price.'VND</p>
+                      <a href="'.$linksp.'">'.$name.' </a>
+                    </div>';
+                    $i+=1;
+              }
+            ?>
+            <!-- <div class="box-sp mr">
+              <div class="img row"><img src="view./images/sp1.webp" alt="" /></div>
+              <p>$30</p>
+              <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
+            </div>
             <div class="box-sp mr">
+              <div class="img row"><img src="view./images/sp1.webp" alt="" /></div>
+              <p>$30</p>
+              <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
+            </div>
+            <div class="box-sp ">
               <div class="img row"><img src="view./images/sp1.webp" alt="" /></div>
               <p>$30</p>
               <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
@@ -30,7 +76,7 @@
               <p>$30</p>
               <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
             </div>
-            <div class="box-sp mr">
+            <div class="box-sp ">
               <div class="img row"><img src="view./images/sp1.webp" alt="" /></div>
               <p>$30</p>
               <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
@@ -45,126 +91,14 @@
               <p>$30</p>
               <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
             </div>
-            <div class="box-sp mr">
+            <div class="box-sp ">
               <div class="img row"><img src="view./images/sp1.webp" alt="" /></div>
               <p>$30</p>
               <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
-            </div>
-            <div class="box-sp mr">
-              <div class="img row"><img src="view./images/sp1.webp" alt="" /></div>
-              <p>$30</p>
-              <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
-            </div>
-            <div class="box-sp mr">
-              <div class="img row"><img src="view./images/sp1.webp" alt="" /></div>
-              <p>$30</p>
-              <a href="#">Vợt Cầu Lông Felet TJ Power | Bộ 3 siêu phẩm </a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="box-right">
-          <div class="row mb">
-            <div class="box-title">TÀI KHOẢN</div>
-            <div class="box-content formTaiKhoan">
-              <form action="#" method="post">
-                <div class="row mb10">
-                  Tên đăng nhập
-                  <input type="text" name="user" id="" />
-                </div>
-                <div class="row mb10">
-                  Mật khẩu
-                  <input type="password" name="user" id="" />
-                </div>
-                <div class="row mb10">
-                  <input type="checkbox" name="" id="" /><span
-                    >Ghi nhớ tài khoản ?</span
-                  >
-                </div>
-                <div class="row mb10">
-                  <input type="submit" value="Đăng nhập" />
-                </div>
-                <li><a href="#">Quên mật khẩu </a></li>
-                <li><a href="#">Đăng ký thành viên</a></li>
-              </form>
-            </div>
-          </div>
-          <div class="row mb">
-            <div class="box-title">DANH MỤC</div>
-            <div class="box-content2 menu-doc">
-              <ul>
-                <li><a href="#">Vợt cầu lông</a></li>
-                <li><a href="#">Giày cầu lông</a></li>
-                <li><a href="#">Balo cầu lông</a></li>
-                <li><a href="#">Quần áo cầu lông</a></li>
-                <li><a href="#">Bao vợt cầu lông</a></li>
-                <li><a href="#">Phụ kiện cầu lông</a></li>
-              </ul>
-            </div>
-            <div class="box-footer search-box">
-              <form action="#" method="post">
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Từ khóa tìm kiếm"
-                />
-              </form>
-            </div>
-          </div>
-          <div class="row">
-            <div class="box-title">DANH MỤC YÊU THÍCH</div>
-            <div class="box-content row">
-              <div class="row mb10 top10">
-                <img src="view./images/bc1.jpg" alt="" /><a href="#"
-                  >Vợt Victor Auraspeed 9000
-                </a>
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc2.jpg" alt="" /><a href="#"
-                  >Vợt Yonex Astrox 100ZZ 2021 Kurenai</a
-                >
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc3.jpg" alt="" /><a href="#"
-                  >Vợt Yonex Astrox 88D Play
-                </a>
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc4.jpg" alt="" /><a href="#"
-                  >Giày cầu lông Yonex Mach</a
-                >
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc5.jpg" alt="" /><a href="#"
-                  >Giày Yonex Dominant 2</a
-                >
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc6.jpg" alt="" /><a href="#"
-                  >Giày cầu lông Lefus F805
-                </a>
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc7.jpg" alt="" /><a href="#"
-                  >Balo Victor BR8010
-                </a>
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc8.jpg" alt="" /><a href="#"
-                  >Balo Victor BR6013 CD</a
-                >
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc9.jpg" alt="" /><a href="#"
-                  >Balo Victor BR6013
-                </a>
-              </div>
-              <div class="row mb10 top10">
-                <img src="view./images/bc10.jpg" alt="" /><a href="#"
-                  >Quả cầu lông Vina Star tập luyện</a
-                >
-              </div>
-            </div>
-          </div>
+          <?php include "boxright.php"; ?>
         </div>
-      </div>
+</div>

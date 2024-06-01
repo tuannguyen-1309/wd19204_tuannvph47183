@@ -90,27 +90,9 @@
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-.banner {
-  /* min-height: 300px;
-  width: 100%;
-  text-align: center; */
-  overflow: hidden;
-}
-.banner .list-images img {
-  width: 100%;
-  height: 300px;
-}
-.banner .list-images {
-  display: flex;
-  transform: translateX();
-  transition: all 0.5s;
-  min-height: 300px;
-  width: 100%;
-  text-align: center;
-}
 .box-sp {
   float: left;
-  width: 31%;
+  width: 32%;
   min-height: 300px;
   border: 1px solid #eee;
   border-radius: 5px;
@@ -253,6 +235,7 @@
 }
 .form-dsLoai table th {
   padding: 20px;
+  width: 20px;
   background-color: #ccc;
 }
 /* .form-dsLoai table th:nth-child(2) {
@@ -270,4 +253,103 @@
 .form-dsLoai table td {
   padding: 10px 20px;
   border: 1px solid #ccc;
+}
+.form-dsLoai table td img{
+  width: 150px;
+  height: 150px;
+}
+/* banner */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.fade img{
+  height: 300px;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Chi tiết sản  phẩm */
+.box-content{
+  padding: 10px;
+}
+.spct{
+  text-align: center;
+}
+.spct img{
+  width: 50%;
+}
+/* tên danh mục chữ hoa */
+.uppercase{
+  text-transform: uppercase;
 }
