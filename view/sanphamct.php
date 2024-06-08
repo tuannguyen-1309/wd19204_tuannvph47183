@@ -12,9 +12,13 @@
                 ?>
               </div>
             </div>
-            <div class="row mb">
+            <!-- <div class="row mb">
               <div class="box-title">BÌNH LUẬN</div>
               <div class="box-content row"></div>
+            </div> -->
+            <div class="row mb">
+              <iframe src="view/binhluan/binhluanform.php?idpro=<?=$id?>" frameborder="0" width="100%" height="300px">
+            </iframe>
             </div>
             <div class="row mb">
               <div class="box-title">SẢN PHẨM CÙNG LOẠI</div>

@@ -8,6 +8,9 @@
   width: 70%;
   margin: 0 auto;
 }
+.thongbao{
+  color: red;
+}
 .row {
   float: left;
   width: 100%;
@@ -93,7 +96,7 @@
 .box-sp {
   float: left;
   width: 32%;
-  min-height: 300px;
+  min-height: 350px;
   border: 1px solid #eee;
   border-radius: 5px;
   padding: 10px;
@@ -130,6 +133,7 @@
   line-height: 150%;
 }
 .formTaiKhoan input[type="text"],
+.formTaiKhoan input[type="email"],
 .formTaiKhoan input[type="password"],
 .form-content input[type="text"] {
   width: 100%;
@@ -141,6 +145,7 @@
   border-radius: 5px;
 }
 .formTaiKhoan input[type="submit"],
+.formTaiKhoan input[type="reset"],
 .form-content input[type="submit"],
 .form-content input[type="reset"],
 .form-content input[type="button"] {
@@ -352,4 +357,12 @@
 /* tên danh mục chữ hoa */
 .uppercase{
   text-transform: uppercase;
+}
+
+.thongbao{
+  color: red;
+}
+.btnaddtocart{
+  width: 100%;
+  margin: 10px;
 }

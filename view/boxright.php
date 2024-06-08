@@ -1,14 +1,35 @@
 <div class="row mb">
             <div class="box-title">TÀI KHOẢN</div>
             <div class="box-content formTaiKhoan">
-              <form action="#" method="post">
+              <?php
+                if(isset($_SESSION['user'])){
+                  extract($_SESSION['user']);
+              ?> 
+                <div class="row mb10">
+                  Xin chào<br>
+                  <?= $user?>
+                </div>
+                <div class="row mb10">
+                  
+                <li><a href="index.php?act=quenmk">Quên mật khẩu </a></li>
+                <li><a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a></li>
+                <?php if($role==1){?>
+                <li><a href="admin/index.php">Đăng nhập admin</a></li>
+                <?php }?>
+                <li><a href="index.php?act=thoat">Thoat</a></li>
+                </div>
+
+              <?php   
+                }else{
+              ?>
+              <form action="index.php?act=dangnhap" method="post">
                 <div class="row mb10">
                   Tên đăng nhập
                   <input type="text" name="user" id="" />
                 </div>
                 <div class="row mb10">
                   Mật khẩu
-                  <input type="password" name="user" id="" />
+                  <input type="password" name="pass" id="" />
                 </div>
                 <div class="row mb10">
                   <input type="checkbox" name="" id="" /><span
@@ -16,10 +37,11 @@
                   >
                 </div>
                 <div class="row mb10">
-                  <input type="submit" value="Đăng nhập" />
+                  <input type="submit" value="Đăng nhập" name="dangnhap">
                 </div>
-                <li><a href="#">Quên mật khẩu </a></li>
-                <li><a href="#">Đăng ký thành viên</a></li>
+                <li><a href="index.php?act=quenmk">Quên mật khẩu </a></li>
+                  <li><a href="index.php?act=dangky">Đăng ký thành viên</a></li>
+                <?php }?>
               </form>
             </div>
           </div>
