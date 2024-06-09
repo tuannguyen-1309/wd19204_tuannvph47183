@@ -53,6 +53,8 @@
           $email = $_POST['email'];
           insert_taikhoan($user,$pass,$email);
           $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng";
+        }else{
+          $thongbao = "Vui lòng nhập đầy đủ thông tin";
         }
         include "./view/taikhoan/dangky.php";
         break;
@@ -82,7 +84,7 @@
           update_taikhoan($id,$user,$pass,$email,$address,$tel);
           $_SESSION['user']=checkuser($user,$pass);
           header('Location: index.php?act=edit_taikhoan');
-        } 
+        }
         include "./view/taikhoan/edit_taikhoan.php";
         break;
       case 'quenmk':

@@ -19,9 +19,4 @@
     $sql="delete from binhluan where id =".$id;
     pdo_execute($sql);
   }
-  function update_binhluan($id,$noidung,$iduser,$idpro,$ngaybinhluan)
-  {
-      $sql = "UPDATE binhluan SET noidung='".$noidung."',iduser='".$iduser."',idpro='".$idpro."',ngaybinhluan='".$ngaybinhluan."' WHERE id=".$id;
-    pdo_execute($sql);
-  }
 ?>

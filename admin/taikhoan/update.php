@@ -31,9 +31,6 @@
               <input type="hidden" name="id" value="<?=$id?>">
               <input type="submit" name="capnhat" value="Cập nhật" />
               <input type="reset" name="nhaplai" value="Nhập lại" />
-              <a href="index.php?act=dskh"
-                ><input type="button" name="btn_list" value="Danh sách"
-              /></a>
             </div>
             <?php
             if(isset($thongbao)&&($thongbao!="")) echo $thongbao;

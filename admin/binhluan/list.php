@@ -16,7 +16,6 @@
                 <?php
                   foreach($listbinhluan as $binhluan){
                     extract($binhluan);
-                    $suabl="index.php?act=suabl&id=".$id;
                     $xoabl="index.php?act=xoabl&id=".$id;
                     echo ' <tr>
                             <td><input type="checkbox" name="" id="" /></td>
@@ -26,7 +25,6 @@
                             <td>'.$idpro.'</td>
                             <td>'.$ngaybinhluan.'</td>
                             <td>
-                              <a href="'.$suabl.'"><input type="button" value="Sửa" /></a>
                               <a onclick="return confirm(\'Bạn có chắc muốn xóa?\')" href="'.$xoabl.'"><input type="button" value="Xóa" /></a>
                             </td>
                                               
